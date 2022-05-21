@@ -8,6 +8,7 @@ type Constructor = {
   level: TripLevel;
   duration: number;
   price: number;
+  image: string;
   createdAt: Date;
 };
 
@@ -18,15 +19,26 @@ class Trip {
   level: TripLevel;
   duration: number;
   price: number;
+  image: string;
   createdAt: Date;
 
-  constructor({ id, title, description, level, duration, price, createdAt }: Constructor) {
+  constructor({
+    id,
+    title,
+    description,
+    level,
+    duration,
+    price,
+    image,
+    createdAt,
+  }: Constructor) {
     this.id = id;
     this.title = title;
     this.description = description;
     this.level = level;
     this.duration = duration;
     this.price = price;
+    this.image = image;
     this.createdAt = createdAt;
   }
 
@@ -36,6 +48,7 @@ class Trip {
     level,
     duration,
     price,
+    image,
   }: CreateTripDto): DocumentModel<Trip> {
     const { id, ...user } = new Trip({
       id: '',
@@ -44,6 +57,7 @@ class Trip {
       level,
       duration,
       price,
+      image,
       createdAt: new Date(),
     });
 

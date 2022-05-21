@@ -26,6 +26,7 @@
     "uuid": "8.3.2"
   },
   "devDependencies": {
+    "@fastify/swagger": "6.0.1",
     "@ls-lint/ls-lint": "1.11.0",
     "@types/bcrypt": "5.0.0",
     "@types/jsonwebtoken": "8.5.8",

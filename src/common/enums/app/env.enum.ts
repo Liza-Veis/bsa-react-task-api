@@ -11,6 +11,7 @@ const ENV = {
   },
   API: {
     V1_PREFIX: '/api/v1',
+    DOCUMENTATION_PREFIX: '/documentation',
   },
   JWT: {
     SECRET: SECRET_KEY as string,

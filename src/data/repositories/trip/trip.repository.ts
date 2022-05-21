@@ -42,8 +42,19 @@ class Trip {
     return this.getById(insertedId.toString());
   }
 
-  static documentToModel(document: WithId<DocumentModel<TripModel>>): TripModel {
-    const { _id: objectId, title, description, level, duration, price, createdAt } = document;
+  static documentToModel(
+    document: WithId<DocumentModel<TripModel>>,
+  ): TripModel {
+    const {
+      _id: objectId,
+      title,
+      description,
+      level,
+      duration,
+      price,
+      image,
+      createdAt,
+    } = document;
 
     const id = objectId.toString();
 
@@ -54,6 +65,7 @@ class Trip {
       level,
       duration,
       price,
+      image,
       createdAt,
     });
   }

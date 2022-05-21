@@ -7,6 +7,7 @@ type TripDto = {
   level: TripLevel;
   duration: number;
   price: number;
+  image: string;
 };
 
 export { TripDto };
